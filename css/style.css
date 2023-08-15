@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --link-color: #5669db;
+  --text-color: #000;
+  --text-color-1: #fff;
+}
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/3.png);
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7vw;
+}
+nav img {
+  width: 7vw;
+}
+.menu ul {
+  display: flex;
+  gap: 5vw;
+}
+.menu ul li a.active {
+  background-color: var(--link-color);
+  color: #fff;
+}
+.menu ul li a {
+  border-radius: 0px 0px 45px 45px;
+  -webkit-border-radius: 0px 0px 45px 45px;
+  -moz-border-radius: 0px 0px 45px 45px;
+  color: #888;
+  font-weight: 500;
+  padding: 3vw 2vw;
+  font-size: 1vw;
+  transition: all 0.3s linear;
+}
+
+section {
+  height: calc(100% - 7vw);
+  width: 100%;
+  display: flex;
+}
+.left {
+  width: 45%;
+  padding: 7vw 7vw;
+}
+.left h1 {
+  font-size: 4vw;
+  color: var(--text-color);
+}
+.left p {
+  padding: 2vw 0;
+  font-size: 1.3vw;
+  color: #888;
+  margin-bottom: 2vw;
+}
+button {
+  padding: 0.8vw 1.2vw;
+  font-size: 1.3vw;
+  background-color: var(--link-color);
+  color: var(--text-color-1);
+  border: none;
+  outline: none;
+  font-weight: 800;
+  border-radius: 9px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.right {
+  width: 55%;
+  margin: 3vw 0 0 3vw;
+}
+.right img {
+  filter: drop-shadow(0px 0px 5px #ddd);
+}
+nav i {
+  display: none;
+  font-size: 5vw;
+}
+@media (max-width: 990px) {
+  nav {
+    height: 15vw;
+    background-color: #222;
+  }
+  nav i {
+    display: block;
+    color: var(--text-color-1);
+  }
+  nav img {
+    width: 10vw;
+  }
+  nav ul li a {
+    display: none;
+  }
+  section {
+    height: calc(100vw - 10vw);
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    height: 100%;
+  }
+  .left h1 {
+    font-size: 11vw;
+    line-height: 13vw;
+  }
+  .left p {
+    font-size: 3vw;
+    margin: 3vw 0;
+  }
+  button {
+    font-size: 4vw;
+    padding: 3vw 5vw;
+    font-weight: 500;
+    letter-spacing: 0px;
+  }
+  .right {
+    width: 100%;
+    height: 100%;
+  }
+  .right img {
+    margin-top: 12vw;
+    width: 90%;
+    height: 80%;
+  }
+}
